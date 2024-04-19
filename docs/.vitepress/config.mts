@@ -1,4 +1,6 @@
 import {defineConfig} from 'vitepress'
+import nav from './nav.mjs'
+import sidebar from './sidebar.mjs'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -31,57 +33,9 @@ export default defineConfig({
                 }
             }
         },
-        nav: [
-            {text: 'Home', link: '/'},
-            {text: "Blog", link: "/articles/javaTools/faker伪造数据生成库"},
-            {text: 'MKExamples', link: '/markdown-examples'},
-            {text: 'APIExamples', link: '/api-examples'},
-            {text: "Gitee", link: "https://gitee.com/jerrylau213"},
-        ],
+        nav: nav,
 
-        sidebar: {
-            "/articles/": [
-                {
-                    text: "Java小工具",
-                    collapsed: true,
-                    items: [
-                        {
-                            text: "faker伪造数据生成库",
-                            link: "/articles/javaTools/faker伪造数据生成库",
-                        },
-                    ],
-                },
-                {
-                    text: "HarmonyOS开发",
-                    collapsed: true,
-                    items: [
-                        {
-                            text: "HarmonyOS实战小项目开发上篇",
-                            link: "/articles/harmonyos/HarmonyOS 实战小项目开发（一）",
-                        },
-                        {
-                            text: "HarmonyOS实战小项目开发下篇",
-                            link: "/articles/harmonyos/HarmonyOS 实战小项目开发（二）",
-                        },
-                    ],
-                },
-                {
-                    text: "Java浅析设计模式",
-                    collapsed: true,
-                    items: [],
-                },
-                {
-                    text: "Java-Redis",
-                    collapsed: true,
-                    items: [],
-                },
-                {
-                    text: "Flink大数据",
-                    collapsed: true,
-                    items: [],
-                },
-            ],
-        },
+        sidebar: sidebar,
 
         socialLinks: [
             {icon: 'github', link: 'https://github.com/jerryLau-hua'}
